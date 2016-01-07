@@ -18,13 +18,11 @@ package org.springframework.cloud.task.module.sample;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
-import org.springframework.cloud.task.annotation.Task;
 import org.springframework.stereotype.Component;
 
 /**
  * Represents a Task and its status will be recorded to a Task Repository.
  */
-@Task("imSampleB")
 @Component
 public class SampleB implements CommandLineRunner {
 

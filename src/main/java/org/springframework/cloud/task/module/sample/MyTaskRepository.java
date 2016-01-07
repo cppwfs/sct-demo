@@ -26,6 +26,7 @@ import org.springframework.cloud.task.repository.TaskRepository;
  */
 //@Component
 public class MyTaskRepository implements TaskRepository {
+
 	@Override
 	public void update(TaskExecution taskExecution) {
 		System.out.println("LOCAL UPDATE: "+taskExecution.getTaskName());
@@ -35,4 +36,10 @@ public class MyTaskRepository implements TaskRepository {
 	public void createTaskExecution(TaskExecution taskExecution) {
 		System.out.println("LOCAL CREATE: "+taskExecution.getTaskName());
 	}
+
+//	@Override
+	public long getNextExecutionId() {
+		return 0;
+	}
+
 }

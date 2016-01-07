@@ -21,8 +21,7 @@ package org.dummy;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.task.annotation.EnableTask;
-import org.springframework.cloud.task.annotation.Task;
+import org.springframework.cloud.task.configuration.EnableTask;
 import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
@@ -38,7 +37,6 @@ public class MyApp {
 		SpringApplication.run(MyApp.class);
 	}
 
-	@Task("HelloWorldTask")
 	public static class MyTask implements CommandLineRunner {
 
 		@Override

@@ -19,7 +19,9 @@
 package org.springframework.cloud.task.module.sample;
 
 import org.springframework.cloud.task.configuration.TaskConfigurer;
+import org.springframework.cloud.task.repository.TaskExplorer;
 import org.springframework.cloud.task.repository.TaskRepository;
+import org.springframework.transaction.PlatformTransactionManager;
 
 /**
  * Created by glennrenfro on 11/19/15.
@@ -32,6 +34,16 @@ public class MyConfigurer  implements TaskConfigurer {
 
 	public TaskRepository getTaskRepository() {
 		return new MyTaskRepository();
+	}
+
+	@Override
+	public PlatformTransactionManager getTransactionManager() {
+		return null;
+	}
+
+	@Override
+	public TaskExplorer getTaskExplorer() {
+		return null;
 	}
 
 }
